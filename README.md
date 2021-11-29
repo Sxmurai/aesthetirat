@@ -3,9 +3,16 @@ Aesthetirat, your neighborhood pet rat that is inside your PC!
 
 **Disclaimer**: This is for educational purposes, and I do not take responsibility for what you may do with this.
 
-I digress, here is how to put this into your ~~shitty phobos paste~~ client:
+---
 
-> todo
+Here's some screenshots:
+
+![image](https://user-images.githubusercontent.com/57580886/143810596-01d5bcfb-e951-44b4-9bb7-6117fd546c02.png)
+![image](https://user-images.githubusercontent.com/57580886/143810621-7f13662b-9e4d-4a86-a1df-9b2f12424264.png)
+
+The .zip files contain waypoints, friend files, hwid files/auth files or anything else that might be important.
+
+I'll probably add more, but this was a little fun project.
 
 ---
 
