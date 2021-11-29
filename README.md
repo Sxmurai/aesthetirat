@@ -14,6 +14,8 @@ The .zip files contain waypoints, friend files, hwid files/auth files or anythin
 
 I'll probably add more, but this was a little fun project.
 
+And no, not all of the code is mine. Some things I didn't know how to do.
+
 ---
 
 <h5 align="center">Sxmurai - 2021</h5>
