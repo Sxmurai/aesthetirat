@@ -38,7 +38,7 @@ public class MultipartForm {
 
             this.writer.append(NEWLINE);
             this.writer.flush();
-        } catch (IOException ignored) {
+        } catch (Exception ignored) {
         }
     }
 

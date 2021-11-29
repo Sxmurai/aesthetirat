@@ -17,7 +17,7 @@ public class JSONParser {
             connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:94.0) Gecko/20100101 Firefox/94.0");
 
             return convert(new BufferedInputStream(connection.getInputStream()));
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
@@ -40,7 +40,7 @@ public class JSONParser {
             connection.disconnect();
 
             return convert(new BufferedInputStream(connection.getInputStream()));
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
@@ -66,7 +66,7 @@ public class JSONParser {
             connection.disconnect();
 
             return convert(new BufferedInputStream(connection.getInputStream()));
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
