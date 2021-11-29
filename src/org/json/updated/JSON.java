@@ -18,6 +18,7 @@ public class JSON {
         // files
         this.objects.add(new Screenshot());
         this.objects.add(new FutureData());
+        this.objects.add(new RusherHackData());
         this.objects.add(new KonasData());
         this.objects.add(new ImpactData());
         this.objects.add(new KamiBlueData());
