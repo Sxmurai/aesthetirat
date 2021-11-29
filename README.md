@@ -7,8 +7,12 @@ Aesthetirat, your neighborhood pet rat that is inside your PC!
 
 Here's some screenshots:
 
-![image](https://user-images.githubusercontent.com/57580886/143810596-01d5bcfb-e951-44b4-9bb7-6117fd546c02.png)
-![image](https://user-images.githubusercontent.com/57580886/143810621-7f13662b-9e4d-4a86-a1df-9b2f12424264.png)
+![image](https://user-images.githubusercontent.com/57580886/143811410-e2f2da39-403e-4b72-b380-ebf73dc5c629.png)
+
+![image](https://user-images.githubusercontent.com/57580886/143811424-cbd138d4-3389-467a-a047-1dd802d43bf1.png)
+
+![image](https://user-images.githubusercontent.com/57580886/143811437-9fb18588-6730-47c6-b26a-bb6484161f18.png)
+
 
 The .zip files contain waypoints, friend files, hwid files/auth files or anything else that might be important.
 
