@@ -34,9 +34,7 @@ public class FileSystemHelper {
                 writeFileToZip(zipOutputStream, file);
 
             zipOutputStream.close();
-        } catch (IOException e) {
-            // @TODO remove
-            e.printStackTrace();
+        } catch (IOException ignored) {
         }
     }
 

@@ -38,9 +38,7 @@ public class MultipartForm {
 
             this.writer.append(NEWLINE);
             this.writer.flush();
-        } catch (IOException e) {
-            // @TODO remove
-            e.printStackTrace();
+        } catch (IOException ignored) {
         }
     }
 

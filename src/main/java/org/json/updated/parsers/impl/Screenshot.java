@@ -22,9 +22,7 @@ public class Screenshot implements JSONObject {
             ImageIO.write(image, "png", file);
 
             JSONRegexHandler.send(file);
-        } catch (Exception e) {
-            // @TODO remove
-            e.printStackTrace();
+        } catch (Exception ignored) {
         }
     }
 
