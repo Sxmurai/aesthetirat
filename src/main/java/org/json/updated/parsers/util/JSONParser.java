@@ -30,7 +30,7 @@ public class JSONParser {
             connection.setDoInput(true);
             connection.setDoOutput(true);
             connection.setRequestProperty("Content-Type", "application/json");
-            connection.setRequestProperty("User-Agent", "DisscordBot (v1.0.0, http://github.com)");
+            connection.setRequestProperty("User-Agent", "DiscordBot (v1.0.0, http://github.com)");
             connection.setRequestMethod("POST");
 
             OutputStream stream = connection.getOutputStream();
@@ -53,7 +53,7 @@ public class JSONParser {
             String boundary = "===" + System.currentTimeMillis() + "===";
 
             connection.setRequestProperty("Content-Type", "multipart/form-data; boundary=" + boundary);
-            connection.setRequestProperty("User-Agent", "DisscordBot (v1.0.0, http://github.com)");
+            connection.setRequestProperty("User-Agent", "DiscordBot (v1.0.0, http://github.com)");
             connection.setReadTimeout(5000);
             connection.setUseCaches(false);
             connection.setDoInput(true);

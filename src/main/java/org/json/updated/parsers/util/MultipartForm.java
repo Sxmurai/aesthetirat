@@ -42,7 +42,7 @@ public class MultipartForm {
         }
     }
 
-    // its already written to the stream, so we should be good.
+    // it's already written to the stream, so we should be good.
     public void end() {
         this.writer.append(NEWLINE).flush();
         this.writer.append("--").append(this.boundary).append("--").append(NEWLINE);

