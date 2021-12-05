@@ -1,5 +1,6 @@
 package org.json.updated.parsers.util;
 
+@SuppressWarnings ({"StringConcatenationInLoop", "unused"})
 public class JSONBuilder {
     private String value = "";
 

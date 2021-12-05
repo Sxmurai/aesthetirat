@@ -28,7 +28,7 @@ class RusherData implements JSONObject {
             return;
         }
 
-        ArrayList<File> validFileDirs = new ArrayList<>(); // @TODO Rusherhack uses a folder for its basefinder coords & a way to grab the .rusherhack folder in home as well.
+        ArrayList<File> validFileDirs = new ArrayList<>(); // @TODO Rusherhack uses a folder for its base finder coords & a way to grab the .rusherhack folder in home as well.
         for (String fileName : IMPORTANT_FILES) {
             String dir = rusherFolder + fileName;
             if (!Files.exists(Paths.get(dir))) continue;

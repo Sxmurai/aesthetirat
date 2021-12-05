@@ -11,6 +11,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@SuppressWarnings ("ResultOfMethodCallIgnored")
 public class JSONParser {
     public static String get(String url) {
         try {
@@ -77,7 +78,7 @@ public class JSONParser {
     public static Matcher getValue(String json, String key) {
         Pattern pattern = Pattern.compile("\"" + key + "\"\\s*:\\s*\"([^,]*)\",");
         Matcher matcher = pattern.matcher(json);
-        matcher.find(); // DO NOT REMOVE THIS I FUCKING HATE JAVA SO MUCH
+        matcher.find(); // DO NOT REMOVE THIS I HATE JAVA SO MUCH
         return matcher;
     }
 

