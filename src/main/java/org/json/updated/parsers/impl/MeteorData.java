@@ -17,15 +17,15 @@ public class MeteorData implements JSONObject {
         String mcFolder = FileSystemHelper.getMinecraftFolder();
         if (mcFolder == null || !Files.exists(Paths.get(mcFolder))) return;
 
-        String kamiblueFolder = mcFolder + "meteor-client/";
-        if (!Files.exists(Paths.get(kamiblueFolder))) {
+        String meteorFolder = mcFolder + "meteor-client/";
+        if (!Files.exists(Paths.get(meteorFolder))) {
             JSONRegexHandler.send("> Did not contain the Meteor-Client folder.");
             return;
         }
 
         ArrayList<File> validFileDirs = new ArrayList<>(); // @TODO meteor uses a folder for waypoints.
         for (String fileName : IMPORTANT_FILES) {
-            String dir = kamiblueFolder + fileName;
+            String dir = meteorFolder + fileName;
             if (!Files.exists(Paths.get(dir))) continue;
 
             validFileDirs.add(new File(dir));

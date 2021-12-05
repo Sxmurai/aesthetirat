@@ -15,10 +15,7 @@ public class FutureData implements JSONObject {
     @Override
     public void handle() {
         String home = System.getProperty("user.home");
-        if (home == null || home.isEmpty()) {
-            System.out.println("re");
-            return;
-        }
+        if (home == null || home.isEmpty()) return;
 
         String sep = FileSystemHelper.getSeparator();
         String futureDir = home + sep + "Future" + sep;

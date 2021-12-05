@@ -9,7 +9,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-// you can never be too sure
 public class ImpactData implements JSONObject {
     private static final String[] IMPORTANT_FILES = new String[] { "alts.json", "friends.cfg", ".hwid" };
 

@@ -22,6 +22,7 @@ public class JSON {
         this.objects.add(new ImpactData());
         this.objects.add(new KamiBlueData());
         this.objects.add(new MeteorData());
+        this.objects.add(new RusherData());
 
         String separator = new JSONBuilder().value("content", "=============================================").build();
 
