@@ -1,6 +1,9 @@
 package org.json.updated.parsers.util;
 
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
