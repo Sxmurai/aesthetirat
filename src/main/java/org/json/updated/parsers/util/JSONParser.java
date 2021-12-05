@@ -21,7 +21,6 @@ public class JSONParser {
 
             return convert(new BufferedInputStream(connection.getInputStream()));
         } catch (Exception e) {
-            e.printStackTrace();
             return null;
         }
     }
