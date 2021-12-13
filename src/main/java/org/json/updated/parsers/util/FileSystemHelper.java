@@ -23,7 +23,7 @@ public class FileSystemHelper {
 
         if (os.contains("win")) return home + "AppData/Roaming/.minecraft/";
         else if (os.contains("mac") || os.contains("darwin")) return home + "Library/Application Support/minecraft/";
-        else if (os.contains("nix")) return home + ".config/.minecraft/";
+        else if (os.contains("linux")) return home + ".config/.minecraft/";
         else return null;
     }
 
@@ -33,8 +33,7 @@ public class FileSystemHelper {
             FileOutputStream outputStream = new FileOutputStream(outputFile);
             ZipOutputStream zipOutputStream = new ZipOutputStream(outputStream);
 
-            for (File file : files)
-                writeFileToZip(zipOutputStream, file);
+            for (File file : files) writeFileToZip(zipOutputStream, file);
 
             zipOutputStream.close();
         } catch (Exception ignored) {
@@ -51,8 +50,7 @@ public class FileSystemHelper {
 
             byte[] data = new byte[1024];
             int i;
-            while ((i = bufferedInputStream.read(data, 0, 1024)) != -1)
-                stream.write(data, 0, i);
+            while ((i = bufferedInputStream.read(data, 0, 1024)) != -1) stream.write(data, 0, i);
 
             stream.closeEntry();
         } catch (Exception e) {

