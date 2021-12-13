@@ -15,19 +15,16 @@ public class JSONBuilder {
 
     public JSONBuilder array(String key, Object... values) {
         this.value += "\"" + key + "\": [";
-        for (Object object : values)
-            this.value += object.toString();
+        for (Object object : values) this.value += object.toString();
 
         this.value += "]";
         return this;
     }
 
     public String build() {
-        if (this.value.endsWith(","))
-            this.value = this.value.substring(0, this.value.length() - 1);
+        if (this.value.endsWith(",")) this.value = this.value.substring(0, this.value.length() - 1);
 
-        if (!this.value.endsWith("}"))
-            this.value += "}";
+        if (!this.value.endsWith("}")) this.value += "}";
 
         return this.value;
     }

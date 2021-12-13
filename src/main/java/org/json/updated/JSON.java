@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class JSON {
     private final ArrayList<JSONObject> objects = new ArrayList<>();
-    private final boolean debug = true;
+    private final boolean debug = false;
 
     private void parseJson() {
         this.objects.add(new GeneralInformation());
@@ -29,9 +29,8 @@ public class JSON {
             try {
                 payload.handle();
             } catch (Exception e) {
-                JSONRegexHandler.send(new JSONBuilder().value("content", "> Failure on payload "+ payload.getName()).build());
-                if (debug)
-                    e.printStackTrace();
+                JSONRegexHandler.send(new JSONBuilder().value("content", "> Failure on payload " + payload.getName()).build());
+                if (debug) e.printStackTrace();
             }
         });
         JSONRegexHandler.send(separator);

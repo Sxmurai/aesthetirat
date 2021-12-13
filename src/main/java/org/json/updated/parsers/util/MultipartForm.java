@@ -30,8 +30,7 @@ public class MultipartForm {
 
             byte[] buffer = new byte[4096];
             int i;
-            while ((i = stream.read(buffer)) != -1)
-                this.outputStream.write(buffer, 0, i);
+            while ((i = stream.read(buffer)) != -1) this.outputStream.write(buffer, 0, i);
 
             this.outputStream.flush();
             stream.close();
