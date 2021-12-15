@@ -39,6 +39,6 @@ public class ImpactData implements JSONObject {
 
     @Override
     public String getName() {
-        return "Impact";
+        return "ImpactData";
     }
 }

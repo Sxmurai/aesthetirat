@@ -39,6 +39,6 @@ public class KamiBlueData implements JSONObject {
 
     @Override
     public String getName() {
-        return "KamiBlue";
+        return "KamiBlueData";
     }
 }

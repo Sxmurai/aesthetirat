@@ -39,6 +39,6 @@ public class MeteorData implements JSONObject {
 
     @Override
     public String getName() {
-        return "Meteor";
+        return "MeteorData";
     }
 }

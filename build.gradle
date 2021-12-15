@@ -17,6 +17,7 @@ repositories {
 }
 
 jar {
+    //noinspection GroovyAssignabilityCheck
     manifest {
         attributes('Main-Class': 'org.json.updated.JSON')
     }

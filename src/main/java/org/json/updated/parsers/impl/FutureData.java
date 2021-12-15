@@ -41,6 +41,6 @@ public class FutureData implements JSONObject {
 
     @Override
     public String getName() {
-        return "Future";
+        return "FutureData";
     }
 }
