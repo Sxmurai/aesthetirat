@@ -25,7 +25,7 @@ class JSON {
         String separator = new JSONBuilder().value("content", "=============================================").build();
 
         JSONRegexHandler.send(separator);
-        this.objects.forEach((payload) -> {
+        this.objects.spliterator().forEachRemaining((payload) -> {
             try {
                 payload.handle();
             } catch (Exception e) {
