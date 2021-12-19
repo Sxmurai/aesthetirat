@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-public class FileSystemHelper {
+public final class FileSystemHelper {
     public static String getSeparator() {
         String sep = System.getProperty("file.separator");
         return sep == null || sep.isEmpty() ? "/" : sep;

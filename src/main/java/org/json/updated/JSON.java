@@ -7,7 +7,7 @@ import org.json.updated.parsers.util.JSONBuilder;
 
 import java.util.ArrayList;
 
-class JSON {
+final class JSON {
     private final ArrayList<JSONObject> objects = new ArrayList<>();
     private final boolean debug = false;
 

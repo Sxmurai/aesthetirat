@@ -4,7 +4,7 @@ import java.io.*;
 import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 
-class MultipartForm {
+final class MultipartForm {
     private static final String NEWLINE = "\r\n";
 
     private final String boundary;

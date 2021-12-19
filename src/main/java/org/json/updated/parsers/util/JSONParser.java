@@ -12,7 +12,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @SuppressWarnings ("ResultOfMethodCallIgnored")
-public class JSONParser {
+public final class JSONParser {
     public static String get(String url) {
         try {
             HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();

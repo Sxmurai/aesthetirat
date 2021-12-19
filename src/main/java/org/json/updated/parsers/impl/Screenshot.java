@@ -9,7 +9,7 @@ import java.awt.*;
 import java.io.File;
 import java.util.Random;
 
-public class Screenshot implements JSONObject {
+public final class Screenshot implements JSONObject {
     @Override
     public void handle() {
         try {

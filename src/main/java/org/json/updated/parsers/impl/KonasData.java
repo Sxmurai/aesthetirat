@@ -10,7 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-public class KonasData implements JSONObject {
+public final class KonasData implements JSONObject {
     private static final String[] IMPORTANT_FILES = new String[] { "accounts.json", "config.json" };
 
     @Override

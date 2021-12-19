@@ -10,7 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-public class KamiBlueData implements JSONObject {
+public final class KamiBlueData implements JSONObject {
     private static final String[] IMPORTANT_FILES = new String[] { "friends.json", "waypoints.json" };
 
     @Override
