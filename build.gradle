@@ -1,22 +1,8 @@
-buildscript {
-    repositories {
-        gradlePluginPortal()
-    }
-    dependencies {
-        classpath 'gradle.plugin.com.github.johnrengelman:shadow:7.1.0'
-    }
-}
-
-apply plugin: 'com.github.johnrengelman.shadow'
+// Adds Java compilation along with testing and bundling capabilities to a project. It serves as the basis for many of the other JVM language Gradle plugins.
 apply plugin: 'java'
 
-group 'org.json'
-
-repositories {
-    mavenCentral()
-}
-
 jar {
+    // Sets the main class to the main rat class in META-INF/MANIFEST.MF.
     manifest.attributes(
             'Main-Class': 'org.json.updated.JSON'
     )

