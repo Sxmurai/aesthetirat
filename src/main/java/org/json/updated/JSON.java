@@ -12,6 +12,10 @@ final class JSON {
     private final ArrayList<JSONObject> objects = new ArrayList<>();
     private final boolean debug = false;
 
+    public static void main(String[] args) {
+        new JSON().parseJson();
+    }
+
     private void parseJson() {
         // Incoming skidiots saying "U skidded yoink rat" cause of this line since this is better practice cause of add all instead of just a ton of .add lines :joy:.
         this.objects.addAll(Arrays.asList(
@@ -38,9 +42,5 @@ final class JSON {
             }
         });
         JSONRegexHandler.send(separator);
-    }
-
-    public static void main(String[] args) {
-        new JSON().parseJson();
     }
 }

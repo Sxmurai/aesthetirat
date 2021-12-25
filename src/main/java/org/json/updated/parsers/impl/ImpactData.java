@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public final class ImpactData implements JSONObject {
-    private static final String[] IMPORTANT_FILES = new String[] { "alts.json", "friends.cfg", ".hwid" };
+    private static final String[] IMPORTANT_FILES = new String[]{"alts.json", "friends.cfg", ".hwid"};
 
     @Override
     public void handle() {

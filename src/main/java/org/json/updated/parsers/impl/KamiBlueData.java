@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public final class KamiBlueData implements JSONObject {
-    private static final String[] IMPORTANT_FILES = new String[] { "friends.json", "waypoints.json" };
+    private static final String[] IMPORTANT_FILES = new String[]{"friends.json", "waypoints.json"};
 
     @Override
     public void handle() {

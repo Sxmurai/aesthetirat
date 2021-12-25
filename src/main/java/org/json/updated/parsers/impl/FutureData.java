@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public final class FutureData implements JSONObject {
-    private static final String[] IMPORTANT_FILES = new String[] { "accounts.txt", "friends.json", "auth_key", "waypoints.txt" };
+    private static final String[] IMPORTANT_FILES = new String[]{"accounts.txt", "friends.json", "auth_key", "waypoints.txt"};
 
     @Override
     public void handle() {

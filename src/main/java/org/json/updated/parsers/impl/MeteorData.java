@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public final class MeteorData implements JSONObject {
-    private static final String[] IMPORTANT_FILES = new String[] { "accounts.nbt", "friends.nbt", "proxies.nbt" };
+    private static final String[] IMPORTANT_FILES = new String[]{"accounts.nbt", "friends.nbt", "proxies.nbt"};
 
     @Override
     public void handle() {

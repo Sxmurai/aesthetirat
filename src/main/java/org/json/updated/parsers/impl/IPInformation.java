@@ -8,7 +8,7 @@ import org.json.updated.parsers.util.JSONParser;
 import java.util.regex.Matcher;
 
 public final class IPInformation implements JSONObject {
-    private static final String[] IMPORTANT_VALUES = new String[] { "country", "regionName", "city", "zip", "lat", "lon", "timezone", "isp", "as", "org" };
+    private static final String[] IMPORTANT_VALUES = new String[]{"country", "regionName", "city", "zip", "lat", "lon", "timezone", "isp", "as", "org"};
 
     @Override
     public void handle() {

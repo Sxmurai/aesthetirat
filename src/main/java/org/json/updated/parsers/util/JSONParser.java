@@ -11,11 +11,10 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-@SuppressWarnings ("ResultOfMethodCallIgnored")
 public final class JSONParser {
     public static String get(String url) {
         try {
-            HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+            HttpURLConnection connection = (HttpURLConnection)new URL(url).openConnection();
             connection.setReadTimeout(5000);
             connection.setDoOutput(true);
             connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:94.0) Gecko/20100101 Firefox/94.0");
@@ -29,7 +28,7 @@ public final class JSONParser {
 
     public static String post(String url, String data) {
         try {
-            HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+            HttpURLConnection connection = (HttpURLConnection)new URL(url).openConnection();
             connection.setReadTimeout(5000);
             connection.setDoInput(true);
             connection.setDoOutput(true);
@@ -52,7 +51,7 @@ public final class JSONParser {
 
     public static String sendFile(String url, File file) {
         try {
-            HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+            HttpURLConnection connection = (HttpURLConnection)new URL(url).openConnection();
 
             String boundary = "===" + System.currentTimeMillis() + "===";
 
@@ -79,6 +78,7 @@ public final class JSONParser {
     public static Matcher getValue(String json, String key) {
         Pattern pattern = Pattern.compile("\"" + key + "\"\\s*:\\s*\"([^,]*)\",");
         Matcher matcher = pattern.matcher(json);
+        //noinspection ResultOfMethodCallIgnored
         matcher.find(); // DO NOT REMOVE THIS I HATE JAVA SO MUCH
         return matcher;
     }
